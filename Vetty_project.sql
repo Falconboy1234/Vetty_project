@@ -48,7 +48,7 @@ GROUP BY 1
 ORDER BY 1;
 
 -- Approach: 
---    1. Filter out rows where refund_time is NOT NULL.
+--    1. Filter out rows where refund_item is NOT NULL.
 --    2. Format purchase_time to 'YYYY-MM' using DATE_FORMAT.
 --    3. Group by the month and count.
 
@@ -78,7 +78,7 @@ FROM transactions1
 WHERE refund_item IS NOT NULL
 GROUP BY store_id;
 --  Approach:
---    1. Filter only rows where refund_time IS NOT NULL.
+--    1. Filter only rows where refund_item IS NOT NULL.
 --    2. Use TIMESTAMPDIFF(MINUTE, start, end) to get the interval.
 --    3. Find the MIN value per store.
 
